@@ -1,0 +1,16 @@
+<div class= >
+  <form action="<%= users_path %>" method="POST"
+      autocomplete="false">
+    <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+    <input class="form-control" type="username" name="user[username]"
+      placeholder="Desired Username"><br/>
+    <input class="form-control" type="password" name="user[password]"
+      placeholder="Desired Password"><br/>
+    <input class="form-control" type="email" name="user[email]"
+      placeholder="Email"><br/>
+    <input class="btn" type="submit" value="Sign Up!">
+    <a class="link" href="/login">Log In!</a>
+  </form>
+</div>
