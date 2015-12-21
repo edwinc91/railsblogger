@@ -1,21 +1,24 @@
 <main ng-controller="postController as postCtrl">
-
+<div class="createPost">
+<h4> Create a New Post </h4>
 <section class="new">
 <form ng-submit="postCtrl.createPost()">
-  <input type="text" class="" ng-model="postCtrl.newPostTitle"
+  <input type="text" class="createTitle" ng-model="postCtrl.newPostTitle"
     placeholder="Title" maxlength="30"><br/>
-  <input type="text" class="" ng-model="postCtrl.newPostDescription"
-    placeholder="Description" maxlength="250"><br/>
+  <textarea rows="4" class="" ng-model="postCtrl.newPostDescription"
+    placeholder="Description" maxlength="250"></textarea>
+    <br/>
   <input type="submit" class="" value="Post">
 </form>
 </section>
+</div>
 
 <section id="postlist">
  <ul>
    <li ng-repeat="posts in postCtrl.current_user_posts | orderBy: 'authored_at'" >
      <span class="title"> Title: {{posts.title}} </span>
      <br/>
-     <span class="description"> Description: {{posts.description}} </span>
+     <span class="description"> {{posts.description}} </span>
      <br/>
      <form ng-submit="posts.deletePost(posts)">
        <input type="submit" value="Delete this Post">

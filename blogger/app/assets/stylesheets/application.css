@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Slabo 27px', serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.title {
+  font-size: 20px;
+  color: blue;
+}
+
+.description {
+  font-size: 16px;
+}
+
+li {
+  margin: auto;
+  width: 60%;
+  border: 3px solid lightblue;
+  padding: 10px;
+}
+
+.createPost {
+  margin: auto;
+  width: 10%;
+  padding: 10px;
+}
+
+.createTitle {
+  width: 300px;
+  margin-left: -90px;
+}
+
+textarea {
+  width: 300px;
+  margin-left: -90px;
+}
