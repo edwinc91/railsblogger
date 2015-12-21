@@ -47,3 +47,22 @@ app.controller('postController', ['$http', function ($http) {
     });
   }
 }]);
+// 
+//   this.updatePost = function(post) {
+//     $http.patch('/posts/' + post.id, {
+//       authenticity_token: authenticity_token,
+//       post: {
+//         title: post.title,
+//         description: post.description,
+//         when: post.authored_at
+//       }
+//
+//     }).success(function (data) {
+//       console.log(data);
+//     }).error(function(err) {
+//       console.log(err)
+//     })
+//
+//   }
+//
+// }]);
