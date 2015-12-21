@@ -5,11 +5,11 @@ class PostsController < ApplicationController
   before_action :require_current_user
 
   def home
-    render '/testangular', layout: "angularlayout"
+    render '/homepage', layout: "angular"
   end
 
   def index
-    @posts = Post.all
+    @posts = current_user.posts
   end
 
   def create
@@ -54,7 +54,7 @@ class PostsController < ApplicationController
 
   def post_params
 
-    params.require(:post).permit(:borrower_id, :title, :description, :latitude, :longitude, :available)
+    params.require(:post).permit(:title, :description)
 
   end
 end
